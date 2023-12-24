@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap'); /*Importei do google fonts as fontes que vou usar, agora para usar as fontes importadas basta usar a referencia que o google fonts dá*/
+
+
+*{
+margin: 0; /*Distância da tag para o exterior*/
+padding: 0; /*Distância da tag para o conteúdo dela*/
+box-sizing: border-box;
+text-decoration: none; /*Tira qualquer decoração que pode ter no texto*/
+}
+
+body { /*Para referenciar tags no css é só escrever o nome da tag*/
+    font-size: 100%; /*Resetar o tamanho da fonte para 100% */
+    background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%); /*A cor da parte de fundo da página, esse código foi pego no Figma da Rafa e colado aqui*/
+}
+   /* A classe cabecalho é um elemento pai das classes cabecalho-imagem por exemplo*/
+.cabecalho { /*Para referenciar classes no css tem que colocar o . antes da classe, por exemplo, na classe cabecalho eu escrevo no css .cabecalho para referenciar ela*/
+    display: flex; /* Para utilizar do flexbox*/
+    flex-direction: row; /*No guia de flexbox para colocar o cabeçalho em forma de linha*/
+    align-items: center; /* Código pego no flexbox para alinhar os itens do cabeçalho no centro*/
+    justify-content: space-around; /*Espaçamento dos itens no cabeçalho*/
+    padding: 24px; /* Espaçamento dos itens em relação as bordas da página*/
+}
+
+.cabecalho-imagem { /*Referenciei a classe cabecalho-imagem que é da imagem do cabeçalho e coloquei 72 pixels de altura*/
+    height: 72px;
+}
+
+.cabecalho-menu {
+    display: flex;
+    gap: 32px; /*Distanciamento dos itens do cabecalho-menu*/
+}
+
+.cabecalho-menu-item { /* Os cabecalho-menu-item no Html são os textos do cabeçlho que usei essa classe para referenciar no Css*/
+    font-family: 'Sarala', sans-serif; /* Fonte Sarala pega no Google fonts*/
+    color: #FFF2E7; /*Cor do cabecalho-menu-item , a cor das letras do cabeçalho*/
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.conteudo {
+    margin-bottom: 48px;
+    border-top: 0.4px solid #FFF2E7; /*Propriedade usada para a borda do topo, no caso usei para fazer a linha abaixo do cabeçalho*/
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: row; /*Direção na horizontal usando o flexbox*/
+    align-items: center; /*Centraliza as coisas*/
+    justify-content: space-around; /* As coisas ter um espaço entre sí, usado da ferramenta flexbox*/
+}
+
+.conteudo-principal-escrito{
+    display: flex; /* Só de colocar o display flex ele já coloca tudo na horizontal, sem precisar do flex-direction: row. Porém tem casos que você não quer isso*/
+    flex-direction: column; /* Coloquei em coluna*/
+    gap: 32px; /* Usado para dar espaços nos elementos, nesse caso nos 3 elementos*/
+}
+
+.conteudo-principal-escrito-titulo {
+    font-family: 'Righteous', cursive; /*Estilo da fonte*/
+    font-weight: 400; /*Peso da fonte*/
+    font-size: 64px; /*Tamanho fonte*/
+    color: #FFF2E7;
+}
+
+.conteudo-principal-escrito-subtitulo {
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #ECD6C4; /*Cor da fonte*/
+}
+
+.conteudo-principal-escrito-botao { /*Estilizando o botão*/
+    background-color: #ECD6C4; /*Cor do fundo, no caso do botão */
+    width: 180px ; /*Largura*/
+    height: 60px ; /*Altura*/
+    border: none; /*Tirando a borda que já vem pré definida*/
+    box-shadow: 4px 5px 4px rgba(0,0,0,0.25); /*Sombra que fica no botão, esses dados foram pegos do Figma*/
+    border-radius: 20px;
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #2F2325;
+}
+
+.conteudo-principal-escrito-botao:hover { /*Para quando passar o mouse por cima*/
+    background-color: rgba(236, 214, 196, 0.53);
+}
+
+.conteudo-principal-imagem {
+    height: 430px;
+}
+
+.conteudo-secundario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 48px; /*Distância do conteúdo secundário para o principal*/
+}
+
+.conteudo-secundario-titulo {
+    border-top: 0.4px solid #FFF2E7; /*Linha*/
+    padding-top: 48px; /* O próprio elemento dar espaço para a linha apenas ele e a linha manter sua posição*/
+    font-family: 'Righteous', cursive; /*Estilo da fonte*/
+    font-weight: 400; /*Peso da fonte*/
+    font-size: 24px;
+    color: #FFF2EF;
+    margin-bottom: 16px; /*Espaço do titulo para os parágrafos*/
+}
+
+.conteudo-secundario-paragrafo {
+    font-family: 'Sarala', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #ECD6C4;
+}
+
+.rodape {
+    padding: 32px; /*Distância de todos os lados*/
+    border-top: 0.4px solid #FFF2E7; /*Linha do rodapé*/ 
+}
+
+.rodape-imagem {
+    height: 48px;
+    display: block; /* Usar para centralizar 1 elemento*/
+    margin: 0 auto; /* Usar para centralizar 1 elemento*/
+}
